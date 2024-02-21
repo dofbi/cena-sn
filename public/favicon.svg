@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 4)" stroke-width=".14132">
+  <path d="m0.40512-4.3966h127.19v128.79h-127.19" fill="#e31b23"/>
+  <path d="m0.40512-4.3966h84.793v128.79h-84.793" fill="#fdef42"/>
+  <path d="m0.40512-4.3966h42.397v128.79h-42.397m55.257-52.808 8.338-25.579 8.338 25.579-21.764-15.828h26.851" fill="#00853f"/>
+ </g>
+</svg>

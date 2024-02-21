@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Form from '../components/Form.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<svg class="astro-a" xmlns="http://www.w3.org/2000/svg" width="600" height="20">
+			<path
+				fill="#e31b23"
+				d="M 0,0 H 900 V 20 H 0"
+				id="path956"
+				style="stroke-width:0.182574" />
+			<path
+				fill="#fdef42"
+				d="M 0,0 H 600 V 20 H 0"
+				id="path958"
+				style="stroke-width:0.182574" />
+			<path
+				d="M 444.96769,17.21905 450,1.7809501 455.03231,17.21905 441.89713,7.6661929 h 16.20574"
+				id="path1347"
+				style="fill:#00853f;fill-opacity:1;stroke-width:0.0852934" />
+			<path
+				d="M 0,0 H 300 V 20 H 0"
+				id="path960"
+				style="fill:#00853f;fill-opacity:1;stroke-width:0.182574" />
+		</svg>
+		<h1>Suis-je dans le fichier national de <span class="text-gradient">2023</span> ?</h1>
+		<p class="instructions">
+			📝 Ce formulaire ne collecte aucune de vos informations personnelles. Vous pouvez vérifier le <a href="https://github.com/dofbi/cena-sn" target="_blank">code source</a> pour vous en rendre compte.
+			Notre objectif est de vous faciliter la vérification de votre présence sur le fichier électoral national 🗳️🇸🇳
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Form href="/" title="Accueil" body="Retour à l'accueil" />
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 900px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

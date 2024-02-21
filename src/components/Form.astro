@@ -1,0 +1,123 @@
+---
+
+---
+<div class="link-card">
+    <form  id="form" method="POST" action="https://www.cena.sn/recherche.php" >
+		<p>
+			<label><input  name="cni" id="cni" type="text" placeholder="N° ci" required /></label>
+		</p>
+		<p>
+			<label><input name="nom" type="text" placeholder="Nom*" required /></label>
+		</p>
+		<p>
+			<label><input name="prenom" type="text" placeholder="Prenom*" required /></label>
+		</p>
+		<p>
+			<label><input name="dnaiss" id="dnaiss" type="text" placeholder="Date de naissance* 00/00/0000" /></label>
+		</p>
+		<p>
+			<button type="submit">Rechercher</button>
+		</p>
+	</form>
+</div>
+<style>
+
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 0.15rem;
+		background-color: #23262d;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 0.5rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.link-card > a, .link-card > form {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: 1em 1.3em;
+		border-radius: 0.35rem;
+		color: white;
+		background-color: #23262d;
+		opacity: 0.8;
+	}
+
+	h2 {
+		margin: 0;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+    
+    p {
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+    }
+
+	h2 span {
+		display: inline-block;
+		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+	}
+
+	.link-card:is(:hover, :focus-within) h2 {
+		color: #ab9721;
+	}
+
+	.link-card:is(:hover, :focus-within) h2 span {
+		transform: translateX(2px);
+	}
+
+  label, input, button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  label {
+    margin-bottom: 4px;
+  }
+
+  label:nth-of-type(2) {
+    margin-top: 12px;
+  }
+
+  input::placeholder {
+    color: gray;
+  }
+
+  input {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  }
+
+
+	button {
+    color: rgb(var(--accent-dark));
+    margin-top: 20px;
+    background: rgb(var(--accent-light));
+    height: 40px;
+    border-radius: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    box-shadow: none;
+  }
+</style>
